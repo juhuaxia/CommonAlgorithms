@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myTestClass" id="test">
+        <div class="testClass1 getClass">
+            <span class="testClass2">
+                <span class="testClass3 getClass lastClass3"></span>
+            </span>
+            <span class="testClass2 getClass">
+                <span class="testClass3 lastClass3">
+                    <span class="testClass4 getClass lastClass4"></span>
+                </span>
+            </span>
+        </div>
+        <div class="testClass1"></div>
+        <div class="testClass1 getClass"></div>
+    </div>
+</body>
+</html>
+<script src="./index.js"></script>
+<script>
+    var dom = document.getElementById('test');
+    var res = getElementsByClass(dom,'getClass');
+    console.log(res);
+</script>
