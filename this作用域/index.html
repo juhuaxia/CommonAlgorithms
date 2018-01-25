@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function a(){
+        console.log('1',this);
+        getName = function(){
+            console.log(2,this)
+        }
+        return this;
+    }
+    a.getName = function(){
+        console.log(3,this)
+    }
+    a.prototype.getName = function(){
+        console.log(4,this);
+    }
+
+    var b = {
+        fn:function(){
+            console.log(5,this);
+            return this;
+        }
+    }
+
+    a();
+    a().getName();
+    a.getName();
+    new a().getName();
+    console.log(b.fn() == b);
+</script>
