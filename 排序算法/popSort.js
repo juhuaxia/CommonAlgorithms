@@ -1,7 +1,7 @@
 var time = 0;
 function popSort(arr){
     for(var i=0,l=arr.length;i<l;i++){
-        var change = 0;
+        var change = 0; //立一个flag
         for(var j =0,len=arr.length;j<len-i;j++){ //第一轮最后一个数肯定最大，第二个最后第二个数肯定最大，所以每轮后i位不需要排序。所以 length - i
             ++time;
             if(arr[j]>arr[j+1]){
