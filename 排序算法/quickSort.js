@@ -32,9 +32,9 @@ function loopArr(arr){
     var o = delteDatumFromArr(arr),
         datum = o.datum,
         arr = o.arr;
-    if(arr.length ==0 && datum ==undefined){
-        return arr;
-    }
+    // if(arr.length ==0 && datum ==undefined){
+    //     return arr;
+    // }
     var leftArr = [],
         rightArr = [];
     for(var i =0,l=arr.length;i<l;i++){

@@ -3,6 +3,11 @@ var obj = {};
 var new_arr = [];
 for(var i =0,l=arr.length;i<l;i++){
     var item = arr[i];
+    /**
+     * {
+     *  '3':['string','number']
+     * }
+     */
     if(!obj[item]){
         obj[item] = [];
         obj[item].push(typeof item);//将类型作为数据放入到数组内，并且给到对应key的值。
